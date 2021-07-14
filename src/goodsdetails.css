@@ -1,0 +1,94 @@
+.swiper{
+	/* display: flex; */
+	width:100%;
+	height:250px;
+}
+.swiper .swiperimg{
+	width:100%;
+	height:100%;
+} 
+.details{
+	height:50px;
+	background: orange;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
+	line-height: 50px;
+	font-weight: 700;
+}
+.tName{
+	padding:10px;
+}
+.tops{
+	margin-bottom: 8px;
+}
+.border-r{
+	width:80%;
+	padding:10px 0;
+	display: flex;
+	justify-content: space-around;
+	border: 1px solid orange;
+	margin: auto;
+	list-style-type:none;
+	border-radius: 10px;
+}
+.detalis_img{
+	margin-bottom: 50px;
+}
+.border-r .active{
+	color:green;
+}
+.activeIndexShow{
+	display: block;
+}
+.activeIndexHide{
+	display: none;
+}
+.carul{
+	list-style-type:none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	padding:10px 0;
+}
+.grids{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 10px;
+} 
+.as{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.imf{
+	width:100px;
+	height:100px;
+}
+.carshop{
+	width: 100%;
+	display: flex;
+	text-align: center;
+	/* justify-content:center; */
+	/* align-items: center; */
+	
+	position: fixed;
+	bottom: 0;
+}
+.carshop .addcar{
+	width:50%;
+	background-color: red;
+	padding: 10px 0;
+	color:#fff;
+}
+.carshop .nowcar{
+	width:50%;
+	background-color:orangered;
+	padding: 10px 0;
+	color:#fff;
+}

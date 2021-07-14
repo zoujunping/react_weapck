@@ -1,0 +1,18 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
+import './index.css';
+import Router from './Router.js'
+// import reportWebVitals from './reportWebVitals';
+// index.js是全局入口文件 分别通过App.js引入各个文件
+ReactDOM.render(
+    <BrowserRouter>
+       <Router />
+     </BrowserRouter>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();

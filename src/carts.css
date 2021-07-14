@@ -1,0 +1,51 @@
+
+.shopList{
+	margin: 0;
+	padding: 0;
+}
+.shopList li{
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 10px;
+}
+.lisLeft{
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}
+.shopImgShow{ 
+	width:100px;
+	height:100px;
+	margin-left: 10px;
+	/* border: 1px solid red; */
+}
+.shopImgShow img{
+	width:100%;
+	height:100%;
+}
+.shopTitle{
+	margin-left: 6px;
+}
+.shopInfo .price{
+	margin-bottom: 6px;
+}
+.shopInfo .shopSelect .numinput{
+	width:20px;
+}
+.dellist{
+	margin-top: 10px;
+}
+.sum{
+	display: flex;
+	padding:30px 10px
+}
+.checkPrice{
+	margin-left: 15px;
+}
+.totalPrice{
+	margin-bottom: 8px;
+}
+.jes{
+	margin-left: 10px;
+}

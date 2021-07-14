@@ -1,0 +1,9 @@
+.headerTop{
+	height:30px;
+	background-color: #FF4500;
+	display: flex;
+	justify-content: space-between;
+	line-height: 30px;
+	padding-left:10px ;
+	color:#fff;
+}
