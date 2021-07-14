@@ -37,6 +37,7 @@ class View extends Component{
 		  selectedTab: 'redTab',
 		  hidden: false,
 		  fullScreen: false,
+		  activeIndex:0
 		}
 		
 		}
@@ -53,7 +54,12 @@ class View extends Component{
 	jumpToDetail(item){
 		this.props.history.push({pathname:'/goodsdetail',query:{productionId:item}}) //传参数
 	}
-	 
+	 handleshow(index){
+		 console.log(index)
+		this.setState({
+			activeIndex:index
+		}) 
+	 }
 	render(){
 		return(
 		<div>
@@ -118,10 +124,13 @@ class View extends Component{
 			 <div className="tab">
 			 {this.state.tabber.map((k,index) =>(
 			 // 底部tab栏
-			 	<div className="as">
-			 	<div>{k.icon}</div>
-			 	<div>{k.name}</div>
-			 	</div>	
+				<ul className="as">
+				<li className={this.state.activeIndex === index?'active':''} key={k.index} onClick={()=> this.handleshow(index)}>
+				<div>{k.icon}</div>
+				<div>{k.name}</div>
+				</li>
+				</ul>
+			 	
 			 ))}
 			 </div>
 			

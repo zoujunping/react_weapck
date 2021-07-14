@@ -48,3 +48,9 @@
 	background: gray;
 	color:#fff;
 }
+.tab .as{
+	list-style-type: none;
+}
+.active{
+	color:orangered;
+}

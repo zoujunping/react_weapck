@@ -134,7 +134,7 @@ class carts extends Component {
 			
 			{/* 左边 */}
 			<div className="lisLeft">
-			<input type="checkbox"
+			<input type="checkbox" readOnly
 			onChange={()=>{this.handleChange(index)}} checked={item.checked} value={this.state.datalist[index].checked||''}
 			/>
 			<div className="shopImgShow">
@@ -152,7 +152,7 @@ class carts extends Component {
 			
 			<div className='shopSelect'>
 			<button className='minus' onClick={()=>{this.handleMinus(index)}}>-</button>
-			<input type="text" value={this.state.datalist[index].count||''} className='numinput'/>
+			<input type="text" value={this.state.datalist[index].count||''} className='numinput' readOnly/>
 			<button className='add' onClick={()=>{this.handleAdd(index)}}>+</button>
 			</div>
 			<div className="dellist">
@@ -164,7 +164,7 @@ class carts extends Component {
 			)}
 			</ul>
 			<div className='sum'>
-			   <input type="checkbox" onChange={()=>{this.handleAll()}} checked={this.state.all}/>
+			   <input type="checkbox" onChange={()=>{this.handleAll()}} checked={this.state.all} readOnly/>
 			    <div className='checkPrice'>
 			        {/* 合算 */}
 			    <div className='totalPrice'>
