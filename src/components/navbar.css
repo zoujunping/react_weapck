@@ -1,0 +1,26 @@
+.tab{
+	display: flex;
+	/* flex-wrap: wrap; */
+	justify-content:space-around;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	width:100%;
+	background: gray;
+	color:#fff;
+	
+}
+.tab .as{
+	list-style-type: none;
+	margin: 0;
+	padding:10px 0;
+}
+.active{
+	color:orangered;
+}
+.activeIndexShow{
+	display: block;
+}
+.activeIndexHide{
+	display: none;
+}

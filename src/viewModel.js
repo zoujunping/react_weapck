@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Carousel, WingBlank,Grid} from 'antd-mobile';
+import Navbar from './components/navbar.js'
 import './viewModel.css'
 import {withRouter} from 'react-router-dom'
 
@@ -8,36 +9,30 @@ class View extends Component{
 	    super(props)
 		this.state = {
 		  Gridlist:[
-			  {imgs:'http://n.sinaimg.cn/photo/400/w200h200/20210416/7e6a-knvsnuf5870869.jpg',id:1,name:'Grid'},
-			  {imgs:'http://n.sinaimg.cn/photo/400/w200h200/20210416/a6a4-knvsnuf5950596.jpg',id:2,name:'Grid'},
-			  {imgs:'http://n.sinaimg.cn/news/transform/w150h150/20180223/xbJU-fyrswmv2029131.jpg',id:3,name:'Grid'},
-			  {imgs:'http://n.sinaimg.cn/news/transform/w150h150/20180223/xbJU-fyrswmv2029131.jpg',id:3,name:'Grid'},
-			  {imgs:'http://n.sinaimg.cn/news/transform/w150h150/20180223/xbJU-fyrswmv2029131.jpg',id:3,name:'Grid'},
-			  {imgs:'http://n.sinaimg.cn/news/transform/w150h150/20180223/xbJU-fyrswmv2029131.jpg',id:3,name:'Grid'}
+			  {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/342db9cc395d4d89ab1e05db68b21a2e/16208098766305266694.jpg@!thumbnail',id:1,name:'Grid'},
+			  {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/342db9cc395d4d89ab1e05db68b21a2e/1620809882814487661f.jpg@!thumbnail',id:2,name:'Grid'},
+			  {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/7bb139c1614641f1a7d6c0b9b3c86914/161215689144469d7ec4.JPG@!thumbnail',id:3,name:'Grid'},
+			  {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/7bb139c1614641f1a7d6c0b9b3c86914/161215689365074b5fef.JPG@!thumbnail',id:3,name:'Grid'},
+			  {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/cc3004bccf27436bb27c9c5927701af8/15951370307475a017e0.jpg@!thumbnail',id:3,name:'Grid'},
+			  {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/cc3004bccf27436bb27c9c5927701af8/1595137034890711f531.jpg@!thumbnail',id:3,name:'Grid'}
 		  ],
 		  swiperdata: [
-			  {imgs:'http://n.sinaimg.cn/photo/400/w200h200/20210416/7e6a-knvsnuf5870869.jpg',id:1},
-			  {imgs:'http://n.sinaimg.cn/photo/400/w200h200/20210416/a6a4-knvsnuf5950596.jpg',id:2},
-			  {imgs:'http://n.sinaimg.cn/news/transform/w150h150/20180223/xbJU-fyrswmv2029131.jpg',id:3}
+			  {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/a3028518bdac405cb646de2e0859307b/16153838743101584440.jpg@!thumbnail',id:1},
+			  {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/6fe8c561cf284e3b9a1b24673d54aad8/16237439708520584440.jpg@!thumbnail',id:2},
+			  {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/a3028518bdac405cb646de2e0859307b/1615383882221787661f.jpg@!thumbnail',id:3}
 		  ],
 		  viewlist:[
-			 {imgs:'http://n.sinaimg.cn/photo/400/w200h200/20210416/7e6a-knvsnuf5870869.jpg',id:1,name:'豪华奔驰汽车1',price:10000},
-			 {imgs:'http://n.sinaimg.cn/photo/400/w200h200/20210416/a6a4-knvsnuf5950596.jpg',id:2,name:'豪华奔驰汽车2',price:20000},
-			 {imgs:'http://n.sinaimg.cn/news/transform/w150h150/20180223/xbJU-fyrswmv2029131.jpg',id:3,name:'豪华奔驰汽车3',price:30000},
-			 {imgs:'http://n.sinaimg.cn/news/transform/w150h150/20180223/xbJU-fyrswmv2029131.jpg',id:4,name:'豪华奔驰汽车4',price:40000},
-			 {imgs:'http://n.sinaimg.cn/news/transform/w150h150/20180223/xbJU-fyrswmv2029131.jpg',id:5,name:'豪华奔驰汽车5',price:50000},
-			 {imgs:'http://n.sinaimg.cn/news/transform/w150h150/20180223/xbJU-fyrswmv2029131.jpg',id:6,name:'豪华奔驰汽车6',price:60000} 
-		  ],
-		  tabber:[
-			  {icon:1,name:'首页'},
-			  {icon:1,name:'分类'},
-			  {icon:1,name:'我的'}
+			 {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/ba0fb98946724d218114d7ab8891b1ab/15989428572744a017e0.jpg@!thumbnail',id:1,name:'豪华奔驰汽车1',price:10000},
+			 {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/ba0fb98946724d218114d7ab8891b1ab/159894286057293955b0.jpg@!thumbnail',id:2,name:'豪华奔驰汽车2',price:20000},
+			 {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/a3028518bdac405cb646de2e0859307b/1615383882221787661f.jpg@!thumbnail',id:3,name:'豪华奔驰汽车3',price:30000},
+			 {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/ee051a9cf20a4cb6839eb5afa791526a/15979029111623106791.jpg@!thumbnail',id:4,name:'豪华奔驰汽车4',price:40000},
+			 {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/6fe8c561cf284e3b9a1b24673d54aad8/16237439687774266694.jpg@!thumbnail',id:5,name:'豪华奔驰汽车5',price:50000},
+			 {imgs:'https://youjia-image.cdn.bcebos.com/modelImage/6fe8c561cf284e3b9a1b24673d54aad8/16237439708520584440.jpg@!thumbnail',id:6,name:'豪华奔驰汽车6',price:60000} 
 		  ],
 		  imgHeight: 176,
 		  selectedTab: 'redTab',
 		  hidden: false,
 		  fullScreen: false,
-		  activeIndex:0
 		}
 		
 		}
@@ -54,12 +49,7 @@ class View extends Component{
 	jumpToDetail(item){
 		this.props.history.push({pathname:'/goodsdetail',query:{productionId:item}}) //传参数
 	}
-	 handleshow(index){
-		 console.log(index)
-		this.setState({
-			activeIndex:index
-		}) 
-	 }
+	
 	render(){
 		return(
 		<div>
@@ -107,7 +97,7 @@ class View extends Component{
 			   <div className="viewlist">
 			    {this.state.viewlist.map(item =>(
 			   	<div className="as">
-			   		<div>
+			   		<div className="ima">
 			   			<img
 			   				key={item.id}
 			   				src={item.imgs}
@@ -120,19 +110,8 @@ class View extends Component{
 			   		</div>	
 			   	 ))}			
 			    </div>
-			   
-			 <div className="tab">
-			 {this.state.tabber.map((k,index) =>(
-			 // 底部tab栏
-				<ul className="as">
-				<li className={this.state.activeIndex === index?'active':''} key={k.index} onClick={()=> this.handleshow(index)}>
-				<div>{k.icon}</div>
-				<div>{k.name}</div>
-				</li>
-				</ul>
-			 	
-			 ))}
-			 </div>
+			   <Navbar/>
+			
 			
 		</div>
 		
